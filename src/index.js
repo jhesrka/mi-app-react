@@ -1,17 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// src/index.js
 
+import React from 'react';
+import ReactDOM from 'react-dom/client';  // Importa desde 'react-dom/client'
+import './index.css';
+import AppRouter from './AppRouter';
+import Modal from 'react-modal';
+
+// Establece el elemento raíz para react-modal
+Modal.setAppElement('#root');
+
+// Crea una raíz en el elemento 'root' del DOM
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Renderiza la aplicación en la raíz creada
 root.render(
   <React.StrictMode>
-    <App />
+    <AppRouter />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
